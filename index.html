@@ -1,137 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patio Arcade - Anuncios y Betas</title>
+    <title>Página Web</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Patio+Arcade&display=swap');
-
         body {
-            font-family: 'Patio Arcade', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://cdn.discordapp.com/attachments/1099958420951531593/1242058926170706021/IMG_1196.jpg?ex=664c7504&is=664b2384&hm=d270f59ab3ea2e53a508c25b2337080037988b47d8a19bac795f5ef15d487ed6&') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
         }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro */
-            color: rgba(229, 9, 20, 1); /* Rojo Netflix */
-            padding: 20px 0;
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .content {
             text-align: center;
         }
-
-        main {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        h1, h2 {
-            margin: 0;
-            padding-bottom: 20px;
-            color: rgba(229, 9, 20, 1); /* Rojo Netflix */
-        }
-
-        .maintenance {
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro */
-            padding: 10px;
+        .discord-link {
+            font-size: 24px;
             margin-bottom: 20px;
-            border-radius: 5px;
-            color: rgba(229, 9, 20, 1); /* Rojo Netflix */
-        }
-
-        #announcements, #betas {
-            margin-bottom: 20px;
-        }
-
-        .game-card {
-            background-color: rgba(255, 255, 255, 0.9);
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 15px;
-            text-align: center;
-            color: black;
-        }
-
-        .game-card img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-
-        .game-card h3 {
-            color: rgba(229, 9, 20, 1); /* Rojo Netflix */
-        }
-
-        footer {
-            background-color: rgba(229, 9, 20, 0.8);
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Patio Arcade - Anuncios y Betas</h1>
-    </header>
-    <main>
-        <div class="maintenance">
-            <p>La página está en mantenimiento. Por favor, vuelva más tarde.</p>
+    <div class="container">
+        <div class="content">
+            <img src="https://giphy.com/clips/bestfriends-cat-cats-kitty-IsDjNQPc4weWPEwhWm" alt="Cat GIF">
+            <br>
+            <a class="discord-link" href="https://discord.gg/GN2aEjj8Nv" target="_blank">¡Únete a nuestro servidor de Discord!</a>
         </div>
-        <section id="announcements">
-            <h2>Últimos Anuncios</h2>
-            <div class="game-card">
-                <img src="https://cdn2.unrealengine.com/Fortnite%2Ffortnite-mobile%2Ffortnite-ios-3840x2160-9da017846dfcf96d07f9b4772874da5b6e8e2a0b.jpg" alt="Fortnite">
-                <h3>Fortnite</h3>
-                <p>Disponible para: iOS, Android</p>
-                <p>Fecha de lanzamiento: Disponible ahora</p>
-            </div>
-            <div class="game-card">
-                <img src="https://cdn1.epicgames.com/spt-assets/428b4ad0c457438c8ab7dc1a190b29ef/download-candy-crush-saga-offer-1875g.jpg" alt="Candy Crush Saga">
-                <h3>Candy Crush Saga</h3>
-                <p>Disponible para: iOS, Android</p>
-                <p>Fecha de lanzamiento: Disponible ahora</p>
-            </div>
-            <div class="game-card">
-                <img src="https://img.redbull.com/images/c_crop,x_0,y_0,h_1440,w_1920/c_fill,w_860,h_573/q_auto:low,f_auto/redbullcom/2022/2/4/zzxz66xybvb8ha1qovsg/garena-free-fire" alt="Garena Free Fire">
-                <h3>Garena Free Fire</h3>
-                <p>Disponible para: iOS, Android</p>
-                <p>Fecha de lanzamiento: Disponible ahora</p>
-            </div>
-        </section>
-        <section id="betas">
-            <h2>Betas Disponibles</h2>
-            <div class="game-card">
-                <img src="https://www.lifewire.com/thmb/5e6I4CEYQqj8eyu-jp7jUohiv5g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fall-guys-switch-release-date-news-5211153-01-fdea007aeb1a48b6b484e7e12ae00856.jpg" alt="Fall Guys Mobile">
-                <h3>Fall Guys Mobile</h3>
-                <p>Plataforma: Android</p>
-                <p>Fecha de inicio: 2024-05-20</p>
-            </div>
-            <div class="game-card">
-                <img src="https://cdn.andro4all.com/andro4all/2022/02/Diablo-Immortal-principal.jpeg" alt="Diablo Immortal">
-                <h3>Diablo Immortal</h3>
-                <p>Plataforma: iOS</p>
-                <p>Fecha de inicio: 2024-06-10</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Patio Arcade</p>
-    </footer>
-    <script>
-        // Función para agregar juegos automáticamente (ejemplo básico)
-        document.addEventListener('DOMContentLoaded', () => {
-            const announcements = [
-                {
-                    name: 'Fortnite',
-                    platform: 'iOS, Android',
-                    releaseDate: 'Disponible ahora',
-                    imgSrc: 'https://cdn2.unrealengine.com/Fortnite%2
+    </div>
+</body>
+</html>
