@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegos Móviles - Anuncios y Betas</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dotum:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Patio+Arcade&display=swap');
 
         body {
-            font-family: 'Dotum', sans-serif;
+            font-family: 'Patio Arcade', sans-serif;
             margin: 0;
             padding: 0;
             background: url('https://cdn.discordapp.com/attachments/1099958420951531593/1242058926170706021/IMG_1196.jpg?ex=664c7504&is=664b2384&hm=d270f59ab3ea2e53a508c25b2337080037988b47d8a19bac795f5ef15d487ed6&') no-repeat center center fixed;
@@ -17,20 +17,28 @@
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(229, 9, 20, 0.8);
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
         }
 
         main {
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
         h1, h2 {
             margin: 0;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
+        }
+
+        .maintenance {
+            text-align: center;
+            background-color: rgba(229, 9, 20, 0.8);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
         }
 
         #announcements, #betas {
@@ -38,7 +46,7 @@
         }
 
         .game-card {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border: 1px solid #ddd;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -54,7 +62,7 @@
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(229, 9, 20, 0.8);
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -69,6 +77,9 @@
         <h1>Juegos Móviles - Anuncios y Betas</h1>
     </header>
     <main>
+        <div class="maintenance">
+            <p>La página está en mantenimiento. Por favor, vuelva más tarde.</p>
+        </div>
         <section id="announcements">
             <h2>Últimos Anuncios</h2>
             <div class="game-card">
@@ -110,8 +121,61 @@
         <p>&copy; 2024 Juegos Móviles</p>
     </footer>
     <script>
-        // Por ahora, no hay funcionalidad específica para agregar.
-        // Este archivo está listo para futuras expansiones y funcionalidades.
-    </script>
-</body>
-</html>
+        // Función para agregar juegos automáticamente (ejemplo básico)
+        document.addEventListener('DOMContentLoaded', () => {
+            const announcements = [
+                {
+                    name: 'Fortnite',
+                    platform: 'iOS, Android',
+                    releaseDate: 'Disponible ahora',
+                    imgSrc: 'https://cdn2.unrealengine.com/Fortnite%2Ffortnite-mobile%2Ffortnite-ios-3840x2160-9da017846dfcf96d07f9b4772874da5b6e8e2a0b.jpg'
+                },
+                {
+                    name: 'Candy Crush Saga',
+                    platform: 'iOS, Android',
+                    releaseDate: 'Disponible ahora',
+                    imgSrc: 'https://cdn1.epicgames.com/spt-assets/428b4ad0c457438c8ab7dc1a190b29ef/download-candy-crush-saga-offer-1875g.jpg'
+                },
+                {
+                    name: 'Garena Free Fire',
+                    platform: 'iOS, Android',
+                    releaseDate: 'Disponible ahora',
+                    imgSrc: 'https://img.redbull.com/images/c_crop,x_0,y_0,h_1440,w_1920/c_fill,w_860,h_573/q_auto:low,f_auto/redbullcom/2022/2/4/zzxz66xybvb8ha1qovsg/garena-free-fire'
+                }
+            ];
+
+            const betas = [
+                {
+                    name: 'Fall Guys Mobile',
+                    platform: 'Android',
+                    startDate: '2024-05-20',
+                    imgSrc: 'https://www.lifewire.com/thmb/5e6I4CEYQqj8eyu-jp7jUohiv5g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fall-guys-switch-release-date-news-5211153-01-fdea007aeb1a48b6b484e7e12ae00856.jpg'
+                },
+                {
+                    name: 'Diablo Immortal',
+                    platform: 'iOS',
+                    startDate: '2024-06-10',
+                    imgSrc: 'https://cdn.andro4all.com/andro4all/2022/02/Diablo-Immortal-principal.jpeg'
+                }
+            ];
+
+            const announcementSection = document.getElementById('announcements');
+            const betaSection = document.getElementById('betas');
+
+            announcements.forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <img src="${game.imgSrc}" alt="${game.name}">
+                    <h3>${game.name}</h3>
+                    <p>Disponible para: ${game.platform}</p>
+                    <p>Fecha de lanzamiento: ${game.releaseDate}</p>
+                `;
+                announcementSection.appendChild(card);
+            });
+
+            betas.forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'game-card';
+                card.innerHTML = `
+                    <img src="${
