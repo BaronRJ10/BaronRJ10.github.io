@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos Móviles - Anuncios y Betas</title>
+    <title>Patio Arcade - Anuncios y Betas</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Patio+Arcade&display=swap');
 
@@ -31,6 +31,7 @@
         h1, h2 {
             margin: 0;
             padding-bottom: 20px;
+            color: rgba(229, 9, 20, 1); /* Rojo Netflix */
         }
 
         .maintenance {
@@ -39,6 +40,7 @@
             padding: 10px;
             margin-bottom: 20px;
             border-radius: 5px;
+            color: rgba(229, 9, 20, 1); /* Rojo Netflix */
         }
 
         #announcements, #betas {
@@ -61,6 +63,10 @@
             border-radius: 5px;
         }
 
+        .game-card h3 {
+            color: rgba(229, 9, 20, 1); /* Rojo Netflix */
+        }
+
         footer {
             background-color: rgba(229, 9, 20, 0.8);
             color: white;
@@ -74,7 +80,7 @@
 </head>
 <body>
     <header>
-        <h1>Juegos Móviles - Anuncios y Betas</h1>
+        <h1>Patio Arcade - Anuncios y Betas</h1>
     </header>
     <main>
         <div class="maintenance">
@@ -118,7 +124,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Juegos Móviles</p>
+        <p>&copy; 2024 Patio Arcade</p>
     </footer>
     <script>
         // Función para agregar juegos automáticamente (ejemplo básico)
@@ -178,4 +184,14 @@
                 const card = document.createElement('div');
                 card.className = 'game-card';
                 card.innerHTML = `
-                    <img src="${
+                    <img src="${game.imgSrc}" alt="${game.name}">
+                    <h3>${game.name}</h3>
+                    <p>Plataforma: ${game.platform}</p>
+                    <p>Fecha de inicio: ${game.startDate}</p>
+                `;
+                betaSection.appendChild(card);
+            });
+        });
+    </script>
+</body>
+</html>
